@@ -1,0 +1,79 @@
+<!DOCTYPE html >
+<html>
+  <head>
+      <title>Ejemplo básico 2</title>
+	  <link type="text/css" rel="stylesheet" href="css/estilo.css" >
+	  <script type='text/javascript' src='js/valida.js'></script>
+	
+  </head>
+	<body>
+	   <div id ="formulario">
+	      <form name="finscripcion" action="registro.html" method="post" onsubmit="return valida()">
+		      <legend>Actividad Formulario</legend>
+			  <div class ="entrada" id="nombres">
+			  <p>
+			  <label for="idNombre">Nombre: </label> 
+			  <input type="text" name="txtNombre" id="idNombre"  />
+			  </p>
+			  
+			  <p>
+  			     <label for="idClave">Clave: </label>
+ 			     <input type="password" name="txtClave" id="idClave" /> 
+			  </p>
+			  </div>
+			
+			<div class ="entrada">
+			<p>Sexo:  </p>
+			     <input type="radio" name="rdSexo" id="idMascu" checked="checked" /> 
+				 <label for="idMascu">Masculino </label> 
+				 <input type="radio" name="rdSexo" id="idFemen" /> 
+				 <label for="idFemen">Femenino </label> 
+			</div>
+			
+			
+			<div class ="entrada">
+			<p>Comuna</p>
+              <select name="comuna[]" multiple="multiple">
+                <optgroup label="Región 1">
+                  <option value="1">Comuna 1</option>
+			      <option value="2">Comuna 2</option>
+                  <option value="3">Comuna 3</option>
+			    </optgroup>
+                <optgroup label="Región 2">
+				   <option value="4" selected="selected">Comuna 1</option>
+				   <option value="5">Comuna 2</option>
+				   <option value="6">Comuna 3</option>
+				</optgroup>
+			   </select>			  
+			   </div>
+			   
+			   
+			  <div class ="entrada"> 
+			<p> Intereses </p>
+			    <input type="checkbox" name="chInteres[]" id="idMusica" value="Musica" />
+				<label for="idMusica">Música </label> 
+				<input type="checkbox" name="chInteres[]" id="idDeporte" value="Deporte" />
+				<label for="idDeporte">Deporte </label> 
+				<input type="checkbox" name="chInteres[]" id="idTeatro" value="Teatro" />
+				<label for="idTeatro">Teatro </label> 
+				</div>
+				
+				
+				<div class ="entrada">
+			<p> Comentarios </p>
+				  <textarea name="txtComenta" id="idComenta" rows="10" cols="30"></textarea>
+				  </div>
+				 
+					<div class="boton">
+			<p><input type="submit" name="btnEnviar" value="Enviar" onclick="valida()" /></p>
+				</div>
+		  
+		  </form>
+	   
+	   
+	   
+	   </div>
+	   
+	   
+    </body>
+</html>

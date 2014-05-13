@@ -1,0 +1,97 @@
+1 : package flujos;
+2 : 
+3 : // Configuraciones típicas de flujos de E/S .
+4 : import java.io.*;
+5 : 
+6 : 
+7 : 
+8 : public class DemoFlujoES {
+9 : 
+10 :     // Lanzar excepciones a la consola:
+11 : public static void main (String [ ] args) throws IOException {
+12 : 
+13 :     // 1. Leyendo de la entrada línea a línea:
+14 : BufferedReader entrada = new BufferedReader(new FileReader ("DemoflujoES.java") ) ;
+15 : String S, S2 = new String();
+16 : while ( (S = entrada. readLine ( ) ) != null)
+17 : S2 += S + "\n";
+18 : entrada.close() ;
+19 : 
+20 : 
+21 : // lb. Leyendo de la entrada estándar:
+22 : BufferedReader entradaEstandar = new BufferedReader(new InputStreamReader(System.in));
+23 : System.out.print("Introduce una linea:");
+24 : System.out.println(entradaEstandar.readLine());
+25 : 
+26 : 
+27 : //2.Entrada desde m e m o r i a
+28 : StringReader entrada2 = new StringReader(S2);
+29 : int c;
+30 : while ( (c = entrada2.read() ) != -1)
+31 : System.out .print ( (char)c) ;
+32 : 
+33 : 
+34 : 
+35 : // 3. Entada con formato desde memoria
+36 : try {
+37 : DataInputStream entrada3 =new DataInputStream (new ByteArrayInputStream(S2.getBytes()));
+38 : while (true)
+39 : System.out.print((char)entrada3.readByte());
+40 : } catch(EOFException e) {
+41 : System.err.println ("Fin del flujo") ;
+42 :     }
+43 : 
+44 : 
+45 : // 4. Salida de archivo
+46 : try {
+47 : BufferedReader entrada4 = new BufferedReader(new StringReader (S2)) ;
+48 : PrintWriter salida1 =new PrintWriter (new BufferedWriter(new FileWriter ("DemoES.out")));
+49 : 
+50 : int contadorLineas = 1;
+51 : while((S = entrada4.readLine()) != null )
+52 :         salida1.println (contadorLineas++ + " : " + S) ;
+53 : salida1.close() ;
+54 : } catch (EOFException e) {
+55 : System.err .println ("E'in del flujo") ;
+56 :     }
+57 : 
+58 : 
+59 : // 5. Almacenando & recuperando datos
+60 : 
+61 : try {
+62 : DataOutputStream salida2 = new DataOutputStream(new BufferedOutputStream(new FileOutputStream("Datos.txt")));
+63 : salida2.writeDouble(3.14159);
+64 : salida2.writeChars ("Eso era pi\n");
+65 : salida2.writeBytes ("Eso era pi\n");
+66 : salida2. close ( ) ;
+67 : DataInputStream entrada5 = new DataInputStream (new BufferedInputStream(new FileInputStream("Datos.txt")));
+68 : BufferedReader entrada5br = new BufferedReader(new InputStreamReader(entrada5));
+69 : // Hay que usar DataInputStream para datos:
+70 : System.out.println(entrada5.readDouble());
+71 : // Ahora s e p i i e d e i i s a r e1 r e a d T , i n e 0 " a p r o p i a d o " :
+72 : System.out.println(entrada5br.readLine());
+73 : // Pero la línea resulta divertida.
+74 : // La creada con writeBytes es correcta:
+75 : System.out.println(entrada5br.readLine());
+76 : } catch (EOFException e) {
+77 : System.err.println("Fin del flujo");
+78 :     }
+79 : 
+80 :  // 6. Leyendo/escribiendo archivos de acceso directo
+81 : RandomAccessFile rf = new RandomAccessFile("rprueba.dat", "rw");
+82 : for(int i = 0; i < 10; i++)
+83 : rf.writeDouble(i*1.414);
+84 : rf.close() ;
+85 : rf=new RandomAccessFile("rprueba.dat", "rw");
+86 : rf.seek (5*8);
+87 : rf.writeDouble (47.0001);
+88 : rf.close ( ) ;
+89 : rf = new RandomAccessFile ("rprueba.dat", "r" );
+90 : 
+91 : for(int i = 0 ; i < 10; i++)
+92 : System.out.println("Valor " + i + ": " +rf.readDouble());
+93 : rf.close();
+94 :     }
+95 : }
+96 : 
+97 : 

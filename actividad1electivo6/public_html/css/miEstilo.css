@@ -1,0 +1,27 @@
+.Error{ border:outset;
+        border-color:red;
+        background:#FFDAB9;}
+.noError{border:"";
+         border-color:"";
+         background:"";}
+
+span{color:red}	
+
+div{border:inset;
+    border-color:grey;
+    background-color: darkkhaki;
+    text-align:center;
+    width:93%;
+    border-radius: 23px;
+}
+
+
+body{ background: black;
+      margin:5% 10% 5% 30%; 
+      text-align:center;				  
+}
+
+h1{
+    color: whitesmoke;
+    text-align: left;
+}

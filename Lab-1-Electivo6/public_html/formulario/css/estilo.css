@@ -1,0 +1,38 @@
+
+p {
+    font-family: arial,serif;
+    font-size: 15pt;
+    padding: 20px 1px 1px 12px;
+}
+form {
+    background-color: #A9C6FF;
+    border-radius: 30px 30px 30px 30px;
+}
+select {
+    margin-left: 33px;
+    width: 50%;
+}
+#formulario {
+    margin-left: 30%;
+    margin-top: 5%;
+    width: 50%;
+}
+.entrada {
+    padding: 0 0 0 90px;
+}
+legend {
+    font-family: arial;
+    font-size: 22pt;
+    margin-left: 21%;
+    padding: 6px;
+}
+#nombres p {
+    margin: 0.4em 0;
+}
+#nombres p label {
+    float: left;
+    width: 25%;
+}
+.boton {
+    margin-left: 40%;
+}

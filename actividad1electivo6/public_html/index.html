@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<!--
+        CLAUDIO SERRANO, ACTIVIDAD 1 ELECTIVO 6 PROGRAMACION WEB
+-->
+<html>
+    <head>
+        <title>CLAUDIO SERRANO - ACTIVIDAD 1</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+          <link type="text/css" rel="stylesheet" href="css/miEstilo.css" >
+          <script language="javascript" type="text/javascript" src="js/valida.js"></script>
+    </head>
+    	<body>
+             <h1>Formulario Actividad 1 - Claudio Serrano</h1>
+	   <div>
+              
+               <form name="finscripcion" action="registro.html" method="post" onsubmit="return valida();">
+		      <p><label for="idNombre">Nombre: </label> 
+			      <input type="text" name="txtNombre" id="idNombre"  />
+			  </p>
+			  <p>
+  			     <label for="idClave">Clave: </label>
+ 			     <input type="password" name="txtClave" id="idClave" /> 
+			  </p>
+			
+			<p>Sexo:  </p>
+			     <input type="radio" name="rdSexo" id="idMascu" checked="checked" /> 
+				 <label for="idMascu">Masculino </label> 
+				 <input type="radio" name="rdSexo" id="idFemen" /> 
+				 <label for="idFemen">Femenino </label> 
+			
+			<p>Comuna</p>
+              <select name="comuna[]" multiple="multiple">
+                <optgroup label="Región 1">
+                  <option value="1">Comuna 1</option>
+			      <option value="2">Comuna 2</option>
+                  <option value="3">Comuna 3</option>
+			    </optgroup>
+                <optgroup label="Región 2">
+				   <option value="4" selected="selected">Comuna 1</option>
+				   <option value="5">Comuna 2</option>
+				   <option value="6">Comuna 3</option>
+				</optgroup>
+			   </select>			  
+			   
+			<p> Intereses </p>
+			    <input type="checkbox" name="chInteres[]" id="idMusica" value="Musica" />
+				<label for="idMusica">Música </label> 
+				<input type="checkbox" name="chInteres[]" id="idDeporte" value="Deporte" />
+				<label for="idDeporte">Deporte </label> 
+				<input type="checkbox" name="chInteres[]" id="idTeatro" value="Teatro" />
+				<label for="idTeatro">Teatro </label> 
+				
+			<p> Comentarios </p>
+				  <textarea name="txtComenta" id="idComenta" rows="10" cols="30"></textarea>
+				  
+			<p><input type="submit" name="btnEnviar" value="Enviar"/></p>
+		  
+		  
+		  </form>
+	   
+	   
+	   
+	   </div>
+	   
+	   
+    </body>
+</html>

@@ -1,0 +1,41 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Contacto</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+               <link href="css/estilo.css" rel="stylesheet" type="text/css"/>
+        <script type="text/javascript" src="js/validaciones.js"> </script>
+    </head>
+    <body>
+        
+        <form name="fficha" action="registro.php" method="post" onSubmit="return validaFin()">
+            <p><label for="idNombre">Nombre: </label>
+                <input type="text" id="idNombre" name="txtNombre" onBlur="valida(this,'spNombre')" />
+			 <span id="spNombre"></span>
+			 </p>
+			 <p>
+                             <label for="idApellido">Apellido: </label>
+                             <input type="text" id="idApellido" name="txtApellido" onBlur="valida(this,'spApellido')" />
+			 <span id="spApellido"></span>
+			 </p>
+		
+			 <p>
+                             <label for="idCorreo">Correo: </label>
+                             <input type="text" id="idCorreo" name="txtCorreo" onBlur="valida(this,'spCorreo');validarEmail(this,'spCorreo')" />
+			 <span id="spCorreo"></span>
+			 </p>
+                          <p>
+                              <label for="idAsunto">Asunto:</label>
+                              <input type="text" id="idAsunto" name="txtAsunto" onBlur="valida(this,'spAsunto')" />
+			 <span id="spAsunto"></span>
+			 </p>
+                         <input id="boton" type="submit" value="ENVIAR"/>
+                         
+        </form>
+       <a href="index.html">Volver</a>
+    </body>
+</html>

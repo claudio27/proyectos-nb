@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<!--
+    CLAUDIO SERRANO - ACTIVIDAD FORMULARIO PIZZERIA ELECTIVO VI
+-->
+<html>
+    <head>
+        <title>ACTIVIDAD 2 - FORMULARIO PIZZERIA - CLAUDIO SERRANO</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+         <link type="text/css" rel="stylesheet" href="css/estilo.css" >
+         <script  type="text/javascript" src="js/func.js"></script>
+    </head>
+    <body>
+          <h1>Formulario Actividad 2 - Pizzeria - Claudio Serrano</h1>
+        <div>
+            <form name="formpizza" action="pedido.html" onsubmit="return valida(this);" method="post">
+                
+                <p>
+                    <label for="idNombre">Nombre Cliente</label>
+                    <input type="text" name="txtNombre" id="idNombre"/>
+                </p>
+                
+                
+                <p>Seleccione tipo de pizza:</p>
+                <input type="radio" name="rdTipo" id="idIndividual" checked="checked" value="Individual"/>
+                <label for="idIndividual">Individual</label>
+                <input type="radio" name="rdTipo" id="idMedia" value="Mediana"/>
+                <label for="idMedia">Mediana</label>
+                <input type="radio" name="rdTipo" id="idFamiliar" value="Familiar"/>
+                <label for="idFamiliar">Familiar</label>
+                
+                <div id="div_ingredientes">
+                    <p>Ingredientes</p>
+                    
+                    <input type="checkbox" name="chIngre[]" id="idJamon" value="Jamon"/>
+                    <label for="idJamon">Jamon</label>
+                    <input type="checkbox" name="chIngre[]" id="idPalmito" value="Palmito"/>
+                    <label for="idPalmito">Palmito</label>
+                    <input type="checkbox" name="chIngre[]" id="idTomate" value="Tomate"/>
+                    <label for="idTomate">Tomate</label>
+                    <input type="checkbox" name="chIngre[]" id="idAceituna" value="Aceituna"/>
+                    <label for="idAceituna">Aceituna</label>
+                    <br/>
+                    <input type="checkbox" name="chIngre[]" id="idChoclo" value="Choclo"/>
+                    <label for="idChoclo">Choclo</label>
+                    <input type="checkbox" name="chIngre[]" id="idCebolla" value="Cebolla"/>
+                    <label for="idCebolla">Cebolla</label>
+                    <input type="checkbox" name="chIngre[]" id="idPimenton" value="Pimenton"/>
+                    <label for="idPimenton">Pimenton</label>
+                    
+                    
+                </div>
+                
+                <p>Extras</p>
+                <label for="idBebida"> Bebida</label>
+                <select name="bebida" id="idBebida">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    
+                </select>
+                <label for="idAlitas"> Alitas de Pollo</label>
+                <select name="alitas" id="idAlitas">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    
+                </select>
+                <p>
+                    <input type="submit" name="btnEnviar" value="Enviar"/>
+                </p>
+                
+            </form>
+            
+            
+            
+            
+        </div>
+        
+    </body>
+</html>

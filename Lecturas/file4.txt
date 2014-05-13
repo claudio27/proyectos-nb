@@ -1,0 +1,5 @@
+Un filtro es un objeto de una clase que implemente el interface FilenameFilter,
+y tiene que redefinir la única función del interface denominada accept. Esta
+función devuelve un dato de tipo boolean. En este caso, la hemos definido de
+continuación. La extensión se le pasa al constructor de la clase Filtro para
+EL CLAUDIO ES UN MAESTRO JIJIJI.

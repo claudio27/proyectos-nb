@@ -1,0 +1,50 @@
+/*
+    Document   : estilos
+    Created on : 19-11-2012, 11:47:40 PM
+    Author     : claudio
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/*
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+body{
+
+    font-family: 'Montserrat Alternates', sans-serif;
+    background-color: black;
+}
+#contenido{
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 300px;
+    height: 900px;
+    margin-left: -150px;
+    margin-top: -300px;
+    background: url('img/banner.png') no-repeat;
+
+
+
+}
+
+#contacto{
+
+    position: absolute;
+    font-size: 26px;
+    text-shadow: 4px 4px 4px #aaa;
+    top: 713px;
+    padding-left: 4px;
+    width: 300px;
+    height : 50px;
+}
+
+a{
+
+    font-family: 'Montserrat Alternates', sans-serif;
+    text-decoration: none;
+    color: white;
+}

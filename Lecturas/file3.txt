@@ -1,0 +1,6 @@
+función devuelve un dato de tipo boolean. En este caso, la hemos definido de
+forma que si el nombre del archivo termina con una dterminada extensión devuelve
+true en caso contrario devuelve false. La función endsWith de la clase String
+realiza esta tarea tal como se ve en la porción de código que viene a
+continuación. La extensión se le pasa al constructor de la clase Filtro para
+inicializar el miembro dato extension.
