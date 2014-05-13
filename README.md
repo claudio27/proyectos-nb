@@ -1,4 +1,4 @@
-projectos-netbeans
+proyectos-netbeans
 ==================
 
-Projectos hechos en el IDE netbeans
+Proyectos hechos en el IDE netbeans
